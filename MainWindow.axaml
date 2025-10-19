@@ -1,0 +1,25 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="AnimalApp.MainWindow"
+        Width="600" Height="400"
+        Title="Animal App">
+    <Grid ColumnDefinitions="2*,3*" RowDefinitions="*">
+        <ListBox x:Name="AnimalList" Grid.Column="0" Margin="10" />
+        
+        <StackPanel Grid.Column="1" Margin="10" Spacing="5">
+            <TextBlock x:Name="AnimalDetails" Text="Select an animal" FontSize="16"/>
+            <Button x:Name="MakeSoundBtn" Content="Make Sound"/>
+            <StackPanel Orientation="Horizontal" Spacing="5">
+                <TextBox x:Name="FeedInput" Width="150" Watermark="Food"/>
+                <Button x:Name="FeedBtn" Content="Feed"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Spacing="5">
+                <Button x:Name="AddAnimalBtn" Content="Add Animal"/>
+                <Button x:Name="RemoveAnimalBtn" Content="Remove Animal"/>
+                <Button x:Name="CrazyActionBtn" Content="Act Crazy"/>
+            </StackPanel>
+            <TextBlock Text="Log:" FontWeight="Bold"/>
+            <ListBox x:Name="ActionLog" Height="150"/>
+        </StackPanel>
+    </Grid>
+</Window>
