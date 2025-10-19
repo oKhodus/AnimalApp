@@ -63,12 +63,6 @@ public partial class MainWindow : Window
             FeedInput.Text = "";
         };
 
-
-        AddAnimalBtn!.Click += (_, _) =>
-        {
-            animals.Add(new Cat { Name = "New Cat", Age = 1 });
-        };
-
         RemoveAnimalBtn!.Click += (_, _) =>
         {
             var selected = AnimalList!.SelectedItem as Animal;
@@ -113,6 +107,9 @@ public partial class MainWindow : Window
                     "Bird" => new Bird { Name = win.AnimalName!, Age = win.Age },
                     "Raccoon" => new Raccoon { Name = win.AnimalName!, Age = win.Age },
                     "Monkey" => new Monkey { Name = win.AnimalName!, Age = win.Age },
+                    "Parrot" => new Parrot { Name = win.AnimalName!, Age = win.Age },
+                    "Tiger" => new Tiger { Name = win.AnimalName!, Age = win.Age },
+                    "Elephant" => new Elephant { Name = win.AnimalName!, Age = win.Age },
                     _ => null
                 };
                 if (newAnimal != null)

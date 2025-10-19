@@ -25,7 +25,7 @@ public partial class AddAnimalWindow : Window
         var TypeSelect = this.FindControl<ComboBox>("TypeSelect");
 
         if (TypeSelect != null)
-            TypeSelect.ItemsSource = new ObservableCollection<string> { "Cat", "Dog", "Bird", "Raccoon", "Monkey" };
+            TypeSelect.ItemsSource = new ObservableCollection<string> { "Cat", "Dog", "Bird", "Raccoon", "Monkey", "Parrot", "Tiger", "Elephant"};
 
         TypeSelect!.SelectedIndex = 0;
 
